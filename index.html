@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- <h1>Music History</h1> -->
+  <nav>
+    <!--Red = #FFB4B0 nav bar w/ solid border -->
+    <a href="#">View music</a>
+    <span> | </span>
+    <a href="#">Add Music</a>
+    <span> | </span>
+    <a href="#">Profile</a>
+  </nav>
+
+    <!--leftBox is a column of filters Blue = #4DD7FA w/ solid border  -->
+  <div class="leftBox">
+    <!--song length slider  -->
+      <label for="time">Length:</label>
+        <br>
+      <input type="range" name="length" id="length" value="3" min="0" max="20">
+
+    <!--Artist drop down menu with 5 options  -->
+      <select>
+        <option value="louis armstrong">Louis Armstrong</option>
+        <option value="bill withers">Bill Withers</option>
+        <option value="luwig van beethoven">Luwig van Beethoven</option>
+        <option value="beats antique">Beats Antique</option>
+        <option value="mozart">Mozart</option>
+      </select>
+    
+    <!--Album drop down menu with 5 options -->
+      <select>
+        <option value="album0">Louis Armstrong</option>
+        <option value="album1">Ain't No Sunshine: The Best Of Bill Withers</option>
+        <option value="album2">Luwig van Beethoven</option>
+        <option value="album3">Beats Antique</option>
+        <option value="album4">Mozart</option>
+      </select>
+    
+    <!--Genre: 3 rows of two checkboxes, rock, classical, pop, blues, punk, jazz,   -->
+      <form>
+        <input type="checkbox" value="Rock">Rock
+        <input type="checkbox" value="Classical">Classical
+        <input type="checkbox" value="Pop">Pop<br>
+        <input type="checkbox" value="Blues">Blues
+        <input type="checkbox" value="Punk">Punk<br>
+        <input type="checkbox" value="Jazz">Jazz 
+      </form>
+    <!--Filter button  -->
+        <button type="button">Filter:</button>
+
+  </div>
+
+    <!--song info  Light yellow = #FEFAC0 w/ solid border -->
+  <div class="songInfo">
+    <!--Song
+    Artist Name   |   Album Name    |     Genre
+  
+  Song
+    Artist Name   |   Album Name    |     Genre
+  
+  Song
+    Artist Name   |   Album Name    |     Genre
+  
+  Song
+    Artist Name   |   Album Name    |     Genre-->
+    <p>Song Name</p>
+      <span>Artist Name   </span> 
+      <span>    |    </span>
+      <span>   Album Name   </span> 
+      <span>    |    </span>
+      <span>Genre</span> 
+
+    <p>Song Name</p>
+      <span>Artist Name   </span> 
+      <span>    |    </span>
+      <span>   Album Name   </span> 
+      <span>    |    </span>
+      <span>Genre</span> 
+
+    <p>Song Name</p>
+      <span>Artist Name   </span> 
+      <span>    |    </span>
+      <span>   Album Name   </span> 
+      <span>    |    </span>
+      <span>Genre</span> 
+
+    <p>Song Name</p>
+      <span>Artist Name   </span> 
+      <span>    |    </span>
+      <span>   Album Name   </span> 
+      <span>    |    </span>
+      <span>Genre</span> 
+
+  </div>
+
+
+  <footer>
+  </footer>
+</body>
+</html>

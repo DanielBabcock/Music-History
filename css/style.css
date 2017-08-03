@@ -1,0 +1,44 @@
+body {
+    background-color: white;
+}
+
+
+nav {
+    background-color: #FFB4B0;
+    border: 2px solid black;
+    border-spacing: 5px 10px;
+    margins: 2%;
+    padding: 2%;
+
+}
+
+.leftBox {
+    background-color: #4DD7FA;
+    text-color: black;
+    border: 2px solid black;
+    border-spacing: 5px 10px;
+    margins: 2%;
+    padding: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}   
+
+.songInfo {
+    background-color: #FEFAC0;
+    text-color: black;
+    border: 2px solid black;
+    border-spacing: 5px 10px;
+    margins: 2%;
+    padding: 2%;
+
+}
+
+p {
+    font-size: 3em;
+}
+
+span {
+    font-size: 1.2em;
+}
