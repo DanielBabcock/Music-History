@@ -1,4 +1,24 @@
-# Music History
+
+#MUSIC HISTORY 2
+<!-- Use JavaScript arrays, loops, and innerHTML to show the music you love. -->
+
+<!-- Use JavaScript to create a list of songs in the index.html file for your Music History project. Download the songs.js file, which contains an array of strings with song information. -->
+
+<!-- Add one song to the beginning and the end of the array. -->
+
+<!-- Loop over the array, and remove any words or characters that obviously don't belong. -->
+
+<!-- Find and replace the > character in each item with a - character. -->
+
+<!-- Add each string to the DOM in index.html in the main content area.
+Example outp-->
+<!-- {Song name} by {Artist} on the album {Album} -->
+<!-- {Song name} by {Artist} on the album {Album} -->
+
+
+
+
+<!-- # Music History 1
 
 This is the project that you will be working for your individual work throughout the entire front end course. Don't worry, you'll be building lots of other applications, but when you learn a new technique, library or language, you'll be cutting your teeth with it on Music History.
 
@@ -19,4 +39,4 @@ Visit the [Music History mockup](https://moqups.com/chortlehoort/1E8LJX7r/) that
 
 ## Completing
 
-Once you are done, make sure you add your files to git, make a commit, and then push your new code up to Github with the following command `git push origin master`.
+Once you are done, make sure you add your files to git, make a commit, and then push your new code up to Github with the following command `git push origin master`. -->
