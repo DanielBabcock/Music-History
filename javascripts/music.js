@@ -1,7 +1,7 @@
 console.log("music.js");
-// (var songs = [];) is an empty array
+
 var songs = [];
-// until we add all of these guys on lines 5-11...
+
 songs[songs.length] = "Rocky Road to Dublin by The Dubliners on the album The Dubliners"
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -11,44 +11,80 @@ songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little
 songs[songs.length] = "Ain't No Sunshine by Bill Withers on the album Just As I Am"
 
 
-// now let's create (var splitSongs = [];) because inorder to filter 
-// things from "songs" we need to break them down.
+
 var splitSongs = [];
-// EXPLAIN forEach HERE!
-// *****EXPLAIN forEach HERE!*****
-// EXPLAIN forEach HERE! song = taco but with a word that makes sense here
+
 songs.forEach(function(song){
     var splitSong = song.split("");
-// then 
-// console.log(splitSong);
-// *****EXPLAIN the push here*****
+    // splitSong breaks up all of the songs into individual characters.
+    // console.log("splitSong: ", splitSong)
     splitSongs.push(splitSong);
 })
-// EXPLAIN the _____ here
+
+
 splitSongs.forEach(function(splitSong){
-// *****EXPLAIN the ________ here*****
+
     splitSong.forEach(function(letter, index){
-// *****EXPLAIN the ________ here*****
+        // removes selected characters and replaces them with a blank
         if (letter === "*" || letter === "!" || letter === "@" || letter === "("){
-// *****EXPLAIN the ________ here*****
+
             splitSong.splice(index, 1);
-// *****EXPLAIN the ________ here*****        
+        // removes > and replaces with -
         } else if (letter === ">"){
-// *****EXPLAIN the ________ here*****
+
             splitSong.splice(index, 1, "-");
         }
 
     })
-// *****EXPLAIN the ________ here*****
-    splitSongs.forEach(function(splitSongs){
-// *****EXPLAIN the ________ here*****
-    let joinedSong = splitSong.join("");
-// *****EXPLAIN the ________ here*****
-        console.log("Join: ", joinedSong);
-
 
 })
+    // iterates over a function once
+    splitSongs.forEach(function(splitSong){
 
-})
+        // 
+        let joinedSong = splitSong.join("");
+        // joins the letters back together with the removals and additions too
+        // console.log("joinedSong: ", joinedSong);
 
-// *****FINAL NOTES: *****
+        // 
+        let bySplit = joinedSong.split("by");
+        // splits the "by" out of the sentence
+        // console.log("bySplit: ", bySplit);
+
+        // 
+        let song = bySplit[0];
+        // array 0 which is everthing before splitting out "by"
+        console.log("song:", song);
+
+        let artistAndAlbumString = bySplit[1];
+        // array 1 which is everthing after splitting out "by"
+        // console.log("artistAndAlbum", artistAndAlbumString);
+
+        let artistAndAlbumArray = artistAndAlbumString.split("on the album");
+        // splits bySplit array 1 at "on the album" leaving just artist and album
+        // console.log("artistAndAlbumArray:",artistAndAlbumArray);
+
+        let artist = artistAndAlbumArray[0];
+        // array 0 = artist
+        // console.log("artist",artist);
+
+        let album = artistAndAlbumArray[1];
+        // array 2 = album
+        // console.log("album:", album);
+        
+        let songDiv = document.getElementById("songs");
+        // =s the template because sonDiv =s the above & songs is the 
+        // templates ID in index.html
+        // console.log("songDiv: ", songDiv);
+
+        // songCard =s the template has artistAndAlbumArray (array 0 artist) 
+        // & (array 1 album) & (song which is bySplit array 0) in the template
+        let songCard = `<div class="song">
+                            <h1>Song: ${song}</h1> 
+                            <p>Artist: ${artist} | Album: ${album} </p>   
+                        </div>`
+        // this give it the command to send to the template
+        // BUT it is only sending the last song in "songs array" 
+        // the += 
+        songDiv.innerHTML += songCard;
+});
