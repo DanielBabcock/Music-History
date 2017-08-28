@@ -12,7 +12,7 @@ songs[songs.length] = "Ain't No Sunshine by Bill Withers on the album Just As I 
 
 
 
-var splitSongs = [];
+var splitSongs = "";
 
 songs.forEach(function(song){
     var splitSong = song.split("");
@@ -85,6 +85,7 @@ splitSongs.forEach(function(splitSong){
                         </div>`
         // this give it the command to send to the template
         // BUT it is only sending the last song in "songs array" 
-        // the += 
+        // the += adds the new card in addition to the previous cards.
+        //  "incremental assignment"
         songDiv.innerHTML += songCard;
 });
