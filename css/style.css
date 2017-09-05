@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: white;
 }
 
@@ -41,4 +41,27 @@ p {
 
 span {
     font-size: 1.2em;
-}
+} */
+/* 
+**********************
+NEW CODE 
+********************** */
+ul > li {
+    display: inline;
+    list-style-type: none;
+    margin: 5px 15px 0 15px;
+    background-color: goldenrod;
+    padding: 5px;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  body {
+    font-size: 2em;
+  }
